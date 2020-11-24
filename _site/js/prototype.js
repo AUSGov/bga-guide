@@ -239,29 +239,32 @@ $(document).ready(function () {
     });
     
     
-    // MINI-LIST
-        /*------------------- Open & close checklist items -------------------*/
-    $(".mini-list-item-title").on("click", function () {
+    // GUIDE MINI-LIST
+    /*------------------- Open & close list items -------------------*/
+    $(".guide-mini-list-item-title").on("click", function () {
         $(this).next('.content-wrapper').slideToggle(400);
 
-        if ($(this).closest('.mini-list-item').hasClass('open')) {
+        if ($(this).closest('.guide-mini-list-item').hasClass('open')) {
             
-            $(this).closest('.mini-list-item').removeClass('open');
-            
-            
-            // Close sub-items when close step
-            /*if ( $(this).closest('.checklist-item').find('.checklist-sub-item').hasClass('open') ) {
-               
-                $(this).closest('.checklist-item').find('.checklist-sub-item.open').find('.content-wrapper').slideToggle(400);
-                $(this).closest('.checklist-item').find('.checklist-sub-item').removeClass('open');
-            }*/
+            $(this).closest('.guide-mini-list-item').removeClass('open');
+
             
         } else {
-            $(this).closest('.mini-list-item').addClass('open');
+            $(this).closest('.guide-mini-list-item').addClass('open');
         }
          
      });
     
+    
+    //GUIDE TILES
+    /*------------------- Open & close items -------------------*/
+    $(".guide-title").on("click", function () {
+        $(this).next('.guide-content').slideToggle(400);
+
+        $(this).toggleClass("open");
+        $(this).parent(".guide-section").toggleClass('open');
+         
+     });
     
 }); // END doc ready
 

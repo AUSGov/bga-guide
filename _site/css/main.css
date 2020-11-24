@@ -3223,6 +3223,9 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 /* ANCHOR MENU */
 .anchor-menu .sticky-container ul li .active-sticky { font-weight: 600 !important; color: #254f90; font-size: 14px; line-height: 20px; text-decoration: none; padding-left: 16px; border: none; border-left: #b3c2d8 solid 4px; }
 
+/* BREADCRUMBS */
+.breadcrumb-wrapper { display: flex; }
+
 /* MODAL */
 .modal-wrapper { display: none; }
 
@@ -3321,5 +3324,129 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 #exporttool .notification-wrapper .notification-content p { color: #254F90; padding-bottom: 16px; }
 
 #exporttool #importing-requirements-section, #exporttool #tariff-section { display: none; }
+
+.page-header-theme-guide { background: #FFE492; padding: 64px 15px !important; }
+
+.page-header-theme-guide .page-header-intro { font-size: 18px; line-height: 30px; }
+
+.guide-mini-list { margin-bottom: 32px; }
+
+.guide-mini-list .guide-mini-list-item { position: relative; margin-bottom: 4px; min-height: 64px; }
+
+.guide-mini-list .guide-mini-list-item .guide-mini-list-item-title { padding: 16px 24px 16px 16px; display: inline-flex; background: #FFF3CF url("../assets/chevron-down-blue.svg") no-repeat; background-position: right 24px center; width: 100%; cursor: pointer; }
+
+.guide-mini-list .guide-mini-list-item .guide-mini-list-item-title h3 { font-size: 18px; padding: 0 36px 0 16px; line-height: 24px; width: calc(100% - 32px); }
+
+@media (max-width: 567px) { .guide-mini-list .guide-mini-list-item .guide-mini-list-item-title h3 { font-size: 16px; } }
+
+.guide-mini-list .guide-mini-list-item .guide-mini-list-item-title:hover { background-color: #FFEEB9; }
+
+.guide-mini-list .guide-mini-list-item .guide-mini-list-item-title:hover h3 { text-decoration: underline; }
+
+.guide-mini-list .guide-mini-list-item .content-wrapper { display: none; }
+
+.guide-mini-list .guide-mini-list-item .content-wrapper .guide-mini-list-item-content { padding: 0 24px 24px 64px; position: relative; background: #FFEEB9; }
+
+.guide-mini-list .guide-mini-list-item .content-wrapper .guide-mini-list-item-content p { font-size: 16px; line-height: 28px; }
+
+.guide-mini-list .guide-mini-list-item .content-wrapper .guide-mini-list-item-content p:last-of-type { padding-bottom: 0; }
+
+.guide-mini-list .guide-mini-list-item .content-wrapper .guide-mini-list-item-content a { color: #254F90; box-shadow: none; border-bottom: 2px solid #748FB8; }
+
+.guide-mini-list .guide-mini-list-item .content-wrapper .guide-mini-list-item-content a:hover { text-decoration: none; box-shadow: #ffffff 0px -20px 0px 0px inset; }
+
+.guide-mini-list .guide-mini-list-item .content-wrapper .guide-mini-list-item-content a:active { color: #000000; }
+
+.guide-mini-list .guide-mini-list-item.open .guide-mini-list-item-title { background: #FFEEB9 url("../assets/chevron-up-blue.svg") no-repeat; background-position: right 24px center; }
+
+.guide-mini-list .guide-mini-list-item.open .guide-mini-list-item-content { background: #FFEEB9; }
+
+#guide-tiles { margin: 0 0 32px 0; }
+
+#guide-tiles .guide-expand-all p { text-align: right; padding-bottom: 16px; }
+
+#guide-tiles .guide-section { background: #E5EDF7; margin-bottom: 16px; padding: 16px 0 0 16px; width: 100%; cursor: pointer; }
+
+#guide-tiles .guide-section.green { background-color: #E0F2F1; }
+
+#guide-tiles .guide-section.green:hover, #guide-tiles .guide-section.green.open { background-color: #ceeae9; }
+
+#guide-tiles .guide-section.green .guide-subtile { border-top: solid #59A0A0 4px; }
+
+#guide-tiles .guide-section.red { background-color: #FFE4DE; }
+
+#guide-tiles .guide-section.red:hover, #guide-tiles .guide-section.red.open { background-color: #ffd3ca; }
+
+#guide-tiles .guide-section.red .guide-subtile { border-top: solid #D96D55 4px; }
+
+#guide-tiles .guide-section.yellow { background-color: #FFF3CF; }
+
+#guide-tiles .guide-section.yellow:hover, #guide-tiles .guide-section.yellow.open { background-color: #ffedb6; }
+
+#guide-tiles .guide-section.yellow .guide-subtile { border-top: solid #F5C550 4px; }
+
+#guide-tiles .guide-section.grey { background-color: #E0E2EE; }
+
+#guide-tiles .guide-section.grey:hover, #guide-tiles .guide-section.grey.open { background-color: #d6d9e9; }
+
+#guide-tiles .guide-section.grey .guide-subtile { border-top: solid #495C74 4px; }
+
+#guide-tiles .guide-section.purple { background-color: #F2EEFA; }
+
+#guide-tiles .guide-section.purple:hover, #guide-tiles .guide-section.purple.open { background-color: #e6def5; }
+
+#guide-tiles .guide-section.purple .guide-subtile { border-top: solid #BDB4EC 4px; }
+
+#guide-tiles .guide-section.light-blue { background-color: #EBF4FF; }
+
+#guide-tiles .guide-section.light-blue:hover, #guide-tiles .guide-section.light-blue.open { background-color: #d7e9ff; }
+
+#guide-tiles .guide-section.light-blue .guide-subtile { border-top: solid #6394CF 4px; }
+
+#guide-tiles .guide-section.magenta { background-color: #FFECF3; }
+
+#guide-tiles .guide-section.magenta:hover, #guide-tiles .guide-section.magenta.open { background-color: #ffdde9; }
+
+#guide-tiles .guide-section.magenta .guide-subtile { border-top: solid #B64D94 4px; }
+
+#guide-tiles .guide-section.blue { background-color: #EBF4FF; }
+
+#guide-tiles .guide-section.blue:hover, #guide-tiles .guide-section.blue.open { background-color: #dcecff; }
+
+#guide-tiles .guide-section.blue .guide-subtile { border-top: solid #4569A0 4px; }
+
+#guide-tiles .guide-section .guide-title { display: inline-flex; background: url("../assets/chevron-down-blue.svg") no-repeat; background-position: right 24px center; padding: 0 64px 0 0; }
+
+#guide-tiles .guide-section .guide-title:hover h3 { text-decoration: underline; }
+
+#guide-tiles .guide-section .guide-title.open { background: url("../assets/chevron-up-blue.svg") no-repeat; background-position: right 24px center; }
+
+#guide-tiles .guide-section .guide-title:last-of-type { margin-bottom: 0; }
+
+#guide-tiles .guide-section .guide-title .title-image { max-width: 250px; margin-bottom: 16px; }
+
+#guide-tiles .guide-section .guide-title .title-image svg { max-width: 250px; height: auto; }
+
+#guide-tiles .guide-section .guide-title .title-text { margin: 0 36px 0 16px; padding: 16px 0 0 0; }
+
+#guide-tiles .guide-section .guide-title .title-text h3 { padding: 0 0 16px 0; }
+
+#guide-tiles .guide-section .guide-title .title-text p { font-size: 16px; padding-bottom: 24px; }
+
+#guide-tiles .guide-section .guide-content { display: none; }
+
+#guide-tiles .guide-section .guide-subtiles-wrapper { padding: 24px 0px 0 16px; display: flex; flex-wrap: wrap; width: 100%; }
+
+#guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile { flex-basis: calc(33.33% - 32px); margin: 0 32px 32px 0; padding: 24px 24px 56px 24px; background: #ffffff; box-shadow: 0 0.125rem 0.375rem 0 rgba(0, 0, 0, 0.1); position: relative; }
+
+#guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile span.tag { margin: 0 0 8px 0; font-size: 12px; border: solid 2px #ffd964; }
+
+#guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile h4 { padding: 0 0 24px 0; }
+
+#guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile p { font-size: 16px; }
+
+#guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile .subtile-link { letter-spacing: 0; font-size: 12px; line-height: 20px; text-transform: uppercase; text-decoration: none; color: #333333; display: block; position: absolute; bottom: 24px; }
+
+#guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile .subtile-link svg { height: 16px; width: 16px; margin: 0 8px 0 0; }
 
 /*# sourceMappingURL=main.css.map */
