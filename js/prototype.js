@@ -259,12 +259,33 @@ $(document).ready(function () {
     //GUIDE TILES
     /*------------------- Open & close items -------------------*/
     $(".guide-title").on("click", function () {
-        $(this).next('.guide-content').slideToggle(400);
+        $(this).next('.guide-content').slideToggle(200);
 
         $(this).toggleClass("open");
         $(this).parent(".guide-section").toggleClass('open');
-         
+            
      });
+    
+    $(".guide-expand-all").on("click", function (){
+        
+        if($(this).hasClass('open')) {
+            $(this).removeClass('open');
+            $('.guide-content').slideUp(400);
+            $(".guide-title").removeClass('open');
+            $(".guide-section").removeClass('open');
+            
+            $(this).find('h5').text('Open all');
+            
+        } else { 
+            $(this).addClass('open');
+            $('.guide-content').slideDown(400);
+            $(".guide-title").addClass('open');
+            $(".guide-section").addClass('open');
+     
+            $(this).find('h5').text('Close all');
+        }
+        
+    });
     
 }); // END doc ready
 

@@ -60,6 +60,51 @@
     background: $darkblue-light;
 }
 
+.audio-header {
+    background: $blue-primary-mid;
+    padding: 32px;
+    
+    @media (max-width: 576px) {
+        padding: 24px 16px;
+    }
+    
+    h2 {
+        color: $white;
+        @include font-format($font-family, $font-semibold, normal);
+        padding: 0;
+        
+        @media (max-width: 768px) {
+            font-size: 24px;
+            line-height: 32px;
+        }  
+    }
+    &.graphic {
+        display: flex;
+        align-items: stretch;
+
+        img {              
+            width: 132px;
+            height: 132px;
+            margin-right: 32px;
+              
+              @media (max-width: 768px) {
+                  width: 80px;
+                  height: 80px;
+                  margin-right: 16px;
+              }
+              @media (max-width: 576px) {
+                  width: 80px;
+                  height: 80px;
+              }
+        }
+        .text-wrapper {
+            display: flex;
+            align-items: center;
+        }
+    }
+    
+}
+
 
 // MINI-LIST
 .mini-list {

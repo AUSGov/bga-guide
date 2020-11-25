@@ -11,6 +11,7 @@
 
 .guide-mini-list {
    margin-bottom: 32px;
+    max-width: 768px;
 
    .guide-mini-list-item {
        position: relative;
@@ -20,7 +21,7 @@
        .guide-mini-list-item-title {
            padding: 16px 24px 16px 16px;
            display: inline-flex;
-           background: #FFF3CF url("../assets/chevron-down-blue.svg") no-repeat;
+           background: #FFF3CF url("../assets/chevron-down-black.svg") no-repeat;
            background-position: right 24px center;
            width: 100%;
            cursor: pointer;
@@ -84,7 +85,7 @@
 
        &.open {
            .guide-mini-list-item-title {
-               background: #FFEEB9 url("../assets/chevron-up-blue.svg") no-repeat;
+               background: #FFEEB9 url("../assets/chevron-up-black.svg") no-repeat;
                background-position: right 24px center;
            }
            .guide-mini-list-item-content {
@@ -98,63 +99,139 @@
     margin: 0 0 32px 0;
 
     .guide-expand-all {
-        p {
-            text-align: right;
-            padding-bottom: 16px;
-        }
+        margin-bottom: 8px;
+        position: relative;
+        min-height: 36px;
+        
+        .guide-group-toggle-content {
+            max-width: 96px;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            h5 {
+                display: inline-block;
+                color: $grey-darker;
+                text-decoration: none;
+                margin: 0;
+                padding: 0;
+            }
+            .BgaIcon {
+                display: inline-block;
+                margin-left: 8px;
+            }
+            &:hover,
+                &:focus {
+                    border-bottom: solid #666666 2px;
+                }    
+        }    
     }
 
     .guide-section {
         background: $blue-lightest;
         margin-bottom: 16px;
-        padding: 16px 0 0 16px;
+        padding: 0 0 0 16px;
         width: 100%;
         cursor: pointer;
 
         &.green {
             background-color: #E0F2F1;
-
-            &:hover,
-            &.open {
+            
+            .guide-title .chevron-wrapper {
                 background-color: darken(#E0F2F1, 5%);
+            }
+            
+            &.open,
+            &:hover, {
+                background-color: darken(#E0F2F1, 5%);
+                
+                .guide-title .chevron-wrapper {
+                    background-color: darken(#E0F2F1, 10%);
+                }
+                &.open {
+                    .guide-title .chevron-wrapper {
+                        background-color: darken(#E0F2F1, 5%);
+                    }    
+                }
             }
             .guide-subtile {
                 border-top: solid $teal-mid 4px;
             }
+            
         }
         
         &.red {
             background-color: #FFE4DE;
 
-            &:hover,
-            &.open {
+            .guide-title .chevron-wrapper {
                 background-color: darken(#FFE4DE, 4%);
+            }
+            
+            &.open,
+            &:hover, {
+                background-color: darken(#FFE4DE, 4%);
+                
+                .guide-title .chevron-wrapper {
+                    background-color: darken(#FFE4DE, 8%);
+                }
+                &.open {
+                    .guide-title .chevron-wrapper {
+                        background-color: darken(#FFE4DE, 4%);
+                    }    
+                }
             }
             .guide-subtile {
                 border-top: solid $red-mid 4px;
             }
+            
+
 
         }
         
         &.yellow {
             background-color: #FFF3CF;
 
-            &:hover,
-            &.open {
-                background-color: darken(#FFF3CF, 5%);
+            .guide-title .chevron-wrapper {
+                background-color: darken(#FFF3CF, 4%);
+            }
+            
+            &.open,
+            &:hover, {
+                background-color: darken(#FFF3CF, 4%);
+                
+                .guide-title .chevron-wrapper {
+                    background-color: darken(#FFF3CF, 8%);
+                }
+                &.open {
+                    .guide-title .chevron-wrapper {
+                        background-color: darken(#FFF3CF, 4%);
+                    }    
+                }
             }
             .guide-subtile {
                 border-top: solid $yellow-secondary-light 4px;
             }
-
         }
         
         &.grey {
             background-color: #E0E2EE;
 
-            &:hover,
-            &.open {
+           .guide-title .chevron-wrapper {
                 background-color: darken(#E0E2EE, 3%);
+            }
+            
+            &.open,
+            &:hover, {
+                background-color: darken(#E0E2EE, 3%);
+                
+                .guide-title .chevron-wrapper {
+                    background-color: darken(#E0E2EE, 7%);
+                }
+                &.open {
+                    .guide-title .chevron-wrapper {
+                        background-color: darken(#E0E2EE, 3%);
+                    }    
+                }
             }
             .guide-subtile {
                 border-top: solid $darkblue-mid 4px;
@@ -165,9 +242,22 @@
         &.purple {
             background-color: #F2EEFA;
 
-            &:hover,
-            &.open {
-                background-color: darken(#F2EEFA, 4%);
+            .guide-title .chevron-wrapper {
+                background-color: darken(#F2EEFA, 3%);
+            }
+            
+            &.open,
+            &:hover, {
+                background-color: darken(#F2EEFA, 3%);
+                
+                .guide-title .chevron-wrapper {
+                    background-color: darken(#F2EEFA, 7%);
+                }
+                &.open {
+                    .guide-title .chevron-wrapper {
+                        background-color: darken(#F2EEFA, 3%);
+                    }    
+                }
             }
             .guide-subtile {
                 border-top: solid $darkpurple-light 4px;
@@ -178,9 +268,22 @@
         &.light-blue {
             background-color: #EBF4FF;
 
-            &:hover,
-            &.open {
+            .guide-title .chevron-wrapper {
                 background-color: darken(#EBF4FF, 4%);
+            }
+            
+            &.open,
+            &:hover, {
+                background-color: darken(#EBF4FF, 4%);
+                
+                .guide-title .chevron-wrapper {
+                    background-color: darken(#EBF4FF, 8%);
+                }
+                &.open {
+                    .guide-title .chevron-wrapper {
+                        background-color: darken(#EBF4FF, 4%);
+                    }    
+                }
             }
             .guide-subtile {
                 border-top: solid $blue-mid 4px;
@@ -191,9 +294,22 @@
         &.magenta {
             background-color: #FFECF3;
 
-            &:hover,
-            &.open {
+            .guide-title .chevron-wrapper {
                 background-color: darken(#FFECF3, 3%);
+            }
+            
+            &.open,
+            &:hover, {
+                background-color: darken(#FFECF3, 3%);
+                
+                .guide-title .chevron-wrapper {
+                    background-color: darken(#FFECF3, 7%);
+                }
+                &.open {
+                    .guide-title .chevron-wrapper {
+                        background-color: darken(#FFECF3, 3%);
+                    }    
+                }
             }
             .guide-subtile {
                 border-top: solid $purple-mid 4px;
@@ -202,11 +318,24 @@
         }
         
         &.blue {
-            background-color: #EBF4FF;
+            background-color: #E4ECF6;
 
-            &:hover,
-            &.open {
-                background-color: darken(#EBF4FF, 3%);
+            .guide-title .chevron-wrapper {
+                background-color: darken(#E4ECF6, 3%);
+            }
+            
+            &.open,
+            &:hover, {
+                background-color: darken(#E4ECF6, 3%);
+                
+                .guide-title .chevron-wrapper {
+                    background-color: darken(#E4ECF6, 7%);
+                }
+                &.open {
+                    .guide-title .chevron-wrapper {
+                        background-color: darken(#E4ECF6, 3%);
+                    }    
+                }
             }
             .guide-subtile {
                 border-top: solid $blue-primary-mid 4px;
@@ -214,12 +343,20 @@
 
         }
        
-
         .guide-title {
             display: inline-flex;
-            background: url("../assets/chevron-down-blue.svg") no-repeat;
-            background-position: right 24px center;
             padding: 0 64px 0 0;
+            position: relative;
+            
+            .chevron-wrapper {
+                width: 92px;
+                height: 100%;
+                position: absolute;
+                background: url("../assets/chevron-down-black-lrg.svg") no-repeat;
+                background-position: center center;
+                right: 0;
+                top: 0;
+            }
 
             &:hover {
                 h3 {
@@ -228,8 +365,10 @@
             }
 
             &.open {
-                background: url("../assets/chevron-up-blue.svg") no-repeat;
-                background-position: right 24px center;
+                .chevron-wrapper {
+                    background: url("../assets/chevron-up-black-lrg.svg") no-repeat;
+                    background-position: center center;
+                }
             }
 
             &:last-of-type {
@@ -238,7 +377,7 @@
 
             .title-image {
                 max-width: 250px;
-                margin-bottom: 16px;
+                margin: 24px 0 16px 0;
 
                 svg {
                     max-width: 250px;
@@ -247,8 +386,8 @@
             }
 
             .title-text {
-                margin: 0 36px 0 16px;
-                padding: 16px 0 0 0;
+                margin: 0 40px 0 16px;
+                padding: 24px 0 0 0;
                 
                 h3 {
                     padding: 0 0 16px 0;
@@ -274,13 +413,13 @@
             .guide-subtile {
                 flex-basis: calc(33.33% - 32px);
                 margin: 0 32px 32px 0;
-                padding: 24px 24px 56px 24px;
+                padding: 16px 24px 56px 24px;
                 background: $white;
                 box-shadow: 0 0.125rem 0.375rem 0 rgba(0, 0, 0, .1);
                 position: relative;
 
                 span.tag {
-                    margin: 0 0 8px 0;
+                    margin: 0 0 24px 0;
                     font-size: 12px;    
                     border: solid 2px #ffd964;
                 }
@@ -311,11 +450,6 @@
                     }
                 }
 
-            }
-        }
-        
-        &.open {
-            .guide-subtiles-wrapper {
             }
         }
     }

@@ -1,4 +1,4 @@
-# BGA Mini-list component
+# BGA Guide
 
-[Mini list demo](https://ausgov.github.io/bga-mini-list/mini-list.html)
+[Guide landing page demo](https://ausgov.github.io/bga-guide/guide-demo.html)
     

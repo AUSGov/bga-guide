@@ -86,5 +86,7 @@ $font-semibold: 600;
     font-weight: $font-weight;
     font-style: $font-style;
 }
-
+//mixin use examples
+// @include font-format($font-family, $font-regular, normal);
+// @include font-format($font-family, $font-semibold, normal);
 
