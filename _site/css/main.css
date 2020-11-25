@@ -3249,11 +3249,13 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 
 .audio-header.graphic { display: flex; align-items: stretch; }
 
+@media (max-width: 576px) { .audio-header.graphic h2 { font-size: 20px; line-height: 28px; } }
+
 .audio-header.graphic img { width: 132px; height: 132px; margin-right: 32px; }
 
 @media (max-width: 768px) { .audio-header.graphic img { width: 80px; height: 80px; margin-right: 16px; } }
 
-@media (max-width: 576px) { .audio-header.graphic img { width: 80px; height: 80px; } }
+@media (max-width: 576px) { .audio-header.graphic img { width: 56px; height: 56px; } }
 
 .audio-header.graphic .text-wrapper { display: flex; align-items: center; }
 
