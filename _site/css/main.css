@@ -3518,11 +3518,11 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 
 #guide-tiles .guide-section .guide-title:last-of-type { margin-bottom: 0; }
 
-#guide-tiles .guide-section .guide-title .title-image { max-width: 250px; margin: 24px 0 16px 0; }
+#guide-tiles .guide-section .guide-title .title-image { max-width: 250px; margin: 24px 0 16px 0; display: block; }
 
 #guide-tiles .guide-section .guide-title .title-image svg { max-width: 250px; height: auto; }
 
-#guide-tiles .guide-section .guide-title .title-text { margin: 0 40px 0 16px; padding: 24px 0 0 0; }
+#guide-tiles .guide-section .guide-title .title-text { margin: 0 40px 0 16px; padding: 24px 0 0 0; display: block; }
 
 #guide-tiles .guide-section .guide-title .title-text h3 { padding: 0 0 16px 0; }
 
@@ -3532,7 +3532,7 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 
 #guide-tiles .guide-section .guide-subtiles-wrapper { padding: 24px 0px 0 16px; display: flex; flex-wrap: wrap; width: 100%; }
 
-#guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile { flex-basis: calc(33.33% - 32px); margin: 0 32px 32px 0; padding: 16px 24px 56px 24px; background: #ffffff; box-shadow: 0 0.125rem 0.375rem 0 rgba(0, 0, 0, 0.1); position: relative; transition: all 0.2s ease; display: block; }
+#guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile { flex-basis: calc(33.33% - 32px); max-width: calc(33.33% - 32px); margin: 0 32px 32px 0; padding: 16px 24px 56px 24px; background: #ffffff; box-shadow: 0 0.125rem 0.375rem 0 rgba(0, 0, 0, 0.1); position: relative; transition: all 0.2s ease; display: block; }
 
 #guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile .page-link { padding: 0; border: none; background-color: #ffffff; }
 

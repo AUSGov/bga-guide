@@ -436,6 +436,7 @@
             .title-image {
                 max-width: 250px;
                 margin: 24px 0 16px 0;
+                display: block;
 
                 svg {
                     max-width: 250px;
@@ -446,6 +447,7 @@
             .title-text {
                 margin: 0 40px 0 16px;
                 padding: 24px 0 0 0;
+                display: block;
                 
                 h3 {
                     padding: 0 0 16px 0;
@@ -470,6 +472,7 @@
             
             .guide-subtile {
                 flex-basis: calc(33.33% - 32px);
+                max-width: calc(33.33% - 32px);
                 margin: 0 32px 32px 0;
                 padding: 16px 24px 56px 24px;
                 background: $white;
