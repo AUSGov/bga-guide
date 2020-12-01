@@ -3556,11 +3556,11 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 
 @media (max-width: 992px) { #guide-tiles .guide-section .guide-title .title-image { max-width: 180px; }
   #guide-tiles .guide-section .guide-title .title-image svg { max-width: 180px; }
-  #guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile { flex-basis: calc(50% - 32px); }
+  #guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile { flex-basis: calc(50% - 32px); max-width: calc(50% - 32px); }
   #guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile span.tag { display: inline-block !important; } }
 
 @media (max-width: 768px) { #guide-tiles .guide-section .guide-title .title-image { display: none; }
-  #guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile { flex-basis: 100%; } }
+  #guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile { flex-basis: 100%; max-width: 100%; } }
 
 @media (max-width: 576px) { #guide-tiles .guide-section { padding: 0; }
   #guide-tiles .guide-section .guide-title .title-text { padding: 24px 0 0 0; margin: 0 16px 0 16px; }

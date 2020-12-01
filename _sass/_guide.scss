@@ -558,6 +558,7 @@
             .guide-subtiles-wrapper {
                 .guide-subtile {
                     flex-basis: calc(50% - 32px);
+                    max-width: calc(50% - 32px);
                     
                     span.tag {
                         display: inline-block !important;
@@ -576,6 +577,7 @@
             .guide-subtiles-wrapper {
                 .guide-subtile {
                     flex-basis: 100%;
+                    max-width: 100%;
                 }
             }
         }
@@ -591,7 +593,6 @@
                 }
                 .chevron-wrapper {
                     width: 64px;
-                    //background-position: center top 32px;
                 }
             }
             .guide-subtiles-wrapper {
