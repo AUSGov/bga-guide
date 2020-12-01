@@ -3349,7 +3349,7 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 
 .page-header-theme-guide .page-header-intro { font-size: 18px; line-height: 30px; }
 
-.page-header-theme-guide svg { width: 100%; height: auto; margin-bottom: 32px; }
+.page-header-theme-guide svg { width: 100%; margin-bottom: 32px; }
 
 @media (max-width: 576px) { .page-header-theme-guide { padding: 64px 15px 48px 15px !important; }
   .page-header-theme-guide h1 { font-size: 32px; line-height: 37px; } }
@@ -3410,7 +3410,7 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 
 #guide-tiles .guide-expand-all .guide-group-toggle-content:hover, #guide-tiles .guide-expand-all .guide-group-toggle-content:focus { border-bottom: solid #666666 2px; }
 
-#guide-tiles .guide-section { background: #E5EDF7; margin-bottom: 16px; padding: 0 0 0 16px; width: 100%; cursor: pointer; }
+#guide-tiles .guide-section { background: #E5EDF7; margin-bottom: 16px; padding: 0 0 0 16px; width: 100%; max-width: 1140px; cursor: pointer; display: block; }
 
 #guide-tiles .guide-section.green { background-color: #E0F2F1; }
 
@@ -3532,7 +3532,7 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 
 #guide-tiles .guide-section .guide-subtiles-wrapper { padding: 24px 0px 0 16px; display: flex; flex-wrap: wrap; width: 100%; }
 
-#guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile { flex-basis: calc(33.33% - 32px); margin: 0 32px 32px 0; padding: 16px 24px 56px 24px; background: #ffffff; box-shadow: 0 0.125rem 0.375rem 0 rgba(0, 0, 0, 0.1); position: relative; transition: all 0.2s ease; }
+#guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile { flex-basis: calc(33.33% - 32px); margin: 0 32px 32px 0; padding: 16px 24px 56px 24px; background: #ffffff; box-shadow: 0 0.125rem 0.375rem 0 rgba(0, 0, 0, 0.1); position: relative; transition: all 0.2s ease; display: block; }
 
 #guide-tiles .guide-section .guide-subtiles-wrapper .guide-subtile .page-link { padding: 0; border: none; background-color: #ffffff; }
 

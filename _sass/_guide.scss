@@ -8,7 +8,7 @@
     }
     svg {
         width: 100%;
-        height: auto;
+        //height: auto;
         margin-bottom: 32px;
     }
     @media (max-width: 576px){
@@ -188,7 +188,9 @@
         margin-bottom: 16px;
         padding: 0 0 0 16px;
         width: 100%;
+        max-width: 1140px;
         cursor: pointer;
+        display: block;
 
         &.green {
             background-color: #E0F2F1;
@@ -474,6 +476,7 @@
                 box-shadow: 0 0.125rem 0.375rem 0 rgba(0, 0, 0, .1);
                 position: relative;
                 transition: all 0.2s ease;
+                display: block;
 
                 .page-link {
                     padding: 0;
