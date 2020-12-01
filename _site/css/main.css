@@ -3360,6 +3360,8 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 
 .top-of-page { padding-top: 0; }
 
+.guide-main-section .anchor-section { width: 100%; }
+
 .guide-mini-list { margin-bottom: 32px; max-width: 768px; }
 
 .guide-mini-list .guide-mini-list-item { position: relative; margin-bottom: 4px; }
@@ -3398,7 +3400,7 @@ label { display: block; padding: 5px 0; font-weight: bold; }
   .guide-mini-list .guide-mini-list-item .content-wrapper .guide-mini-list-item-content { padding: 0 24px 16px 40px; }
   .guide-mini-list .guide-mini-list-item.open .guide-mini-list-item-title { background-position: right 12px center; } }
 
-#guide-tiles { margin: 0 0 32px 0; }
+#guide-tiles { margin: 0 0 32px 0; width: 100%; max-width: 100%; }
 
 #guide-tiles .guide-expand-all { margin-bottom: 8px; position: relative; min-height: 36px; }
 

@@ -8,7 +8,6 @@
     }
     svg {
         width: 100%;
-        //height: auto;
         margin-bottom: 32px;
     }
     @media (max-width: 576px){
@@ -36,7 +35,11 @@
 .top-of-page {
     padding-top: 0;
 }
-
+.guide-main-section {
+    .anchor-section {
+        width: 100%;
+    }
+}
 
 .guide-mini-list {
    margin-bottom: 32px;
@@ -153,6 +156,10 @@
 
 #guide-tiles {
     margin: 0 0 32px 0;
+    width: 100%;
+    max-width: 100%;
+    //display: flex;
+    //flex-wrap: wrap;
 
     .guide-expand-all {
         margin-bottom: 8px;
@@ -191,6 +198,7 @@
         max-width: 1140px;
         cursor: pointer;
         display: block;
+        //flex-basis: 100%:
 
         &.green {
             background-color: #E0F2F1;
