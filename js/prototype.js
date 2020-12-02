@@ -263,6 +263,13 @@ $(document).ready(function () {
 
         $(this).toggleClass("open");
         $(this).parent(".guide-section").toggleClass('open');
+        
+        var sectionId = $(this).parent(".guide-section").attr("id");
+        if ($(this).parent(".guide-section").hasClass('open')) {
+            sessionStorage.setItem(sectionId, 'open');
+        } else {
+            sessionStorage.setItem(sectionId, '');
+        }
             
      });
     
@@ -287,5 +294,10 @@ $(document).ready(function () {
         
     });
     
+
+    
 }); // END doc ready
 
+$(window).on( "unload", function(){
+
+} );
