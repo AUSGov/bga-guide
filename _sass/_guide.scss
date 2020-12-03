@@ -10,6 +10,12 @@
         width: 100%;
         margin-bottom: 32px;
     }
+    img {
+        width: 100%;
+        max-width: 425px;
+        margin: 0 auto 32px;
+        display: block;
+    }
     @media (max-width: 576px){
         padding: 64px 15px 48px 15px !important;
         
@@ -25,7 +31,7 @@
         .header-image-wrapper {
             width: inherit;
             margin-top: 16px;
-            svg {
+            svg, img {
                 position: absolute;
                 padding-right: 30px;        
             }
@@ -158,8 +164,6 @@
     margin: 0 0 32px 0;
     width: 100%;
     max-width: 100%;
-    //display: flex;
-    //flex-wrap: wrap;
 
     .guide-expand-all {
         margin-bottom: 8px;
@@ -198,7 +202,6 @@
         max-width: 1140px;
         cursor: pointer;
         display: block;
-        //flex-basis: 100%:
 
         &.green {
             background-color: #E0F2F1;
@@ -249,9 +252,6 @@
             .guide-subtile {
                 border-top: solid $red-mid 4px;
             }
-            
-
-
         }
         
         &.yellow {
@@ -380,7 +380,6 @@
             .guide-subtile {
                 border-top: solid $purple-mid 4px;
             }
-
         }
         
         &.blue {
@@ -446,7 +445,7 @@
                 margin: 24px 0 16px 0;
                 display: block;
 
-                svg {
+                svg, img {
                     max-width: 250px;
                     height: auto;
                 }
@@ -530,7 +529,7 @@
                         padding-right: 24px;
                     }
                     
-                    svg { 
+                    svg{ 
                         height: 16px;
                         width: 16px;
                         margin: 0 8px 0 0;

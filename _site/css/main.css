@@ -3351,12 +3351,14 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 
 .page-header-theme-guide svg { width: 100%; margin-bottom: 32px; }
 
+.page-header-theme-guide img { width: 100%; max-width: 425px; margin: 0 auto 32px; display: block; }
+
 @media (max-width: 576px) { .page-header-theme-guide { padding: 64px 15px 48px 15px !important; }
   .page-header-theme-guide h1 { font-size: 32px; line-height: 37px; } }
 
 @media (min-width: 768px) { .page-header-theme-guide { min-height: 384px; }
   .page-header-theme-guide .header-image-wrapper { width: inherit; margin-top: 16px; }
-  .page-header-theme-guide .header-image-wrapper svg { position: absolute; padding-right: 30px; } }
+  .page-header-theme-guide .header-image-wrapper svg, .page-header-theme-guide .header-image-wrapper img { position: absolute; padding-right: 30px; } }
 
 .top-of-page { padding-top: 0; }
 
@@ -3522,7 +3524,7 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 
 #guide-tiles .guide-section .guide-title .title-image { max-width: 250px; margin: 24px 0 16px 0; display: block; }
 
-#guide-tiles .guide-section .guide-title .title-image svg { max-width: 250px; height: auto; }
+#guide-tiles .guide-section .guide-title .title-image svg, #guide-tiles .guide-section .guide-title .title-image img { max-width: 250px; height: auto; }
 
 #guide-tiles .guide-section .guide-title .title-text { margin: 0 40px 0 16px; padding: 24px 0 0 0; display: block; }
 
