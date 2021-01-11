@@ -1,32 +1,75 @@
 .page-header-theme-guide {
     background: #FFE492;
-    padding: 64px 15px !important;
+    padding: 48px 15px !important;
     
     .page-header-intro {
         font-size: 18px;
         line-height: 30px;
     }
-    svg {
-        width: 100%;
-        margin-bottom: 32px;
+    .header-image-wrapper {
+        //white-space: nowrap;
+        //text-align: center; 
+        //margin: .5em 0;
     }
     img {
         width: 100%;
-        max-width: 425px;
-        margin: 0 auto 32px;
+        margin: 0 auto 0;
         display: block;
+        //vertical-align: middle;
+        max-height: 190px;
+        max-width: 350px;
     }
-    @media (max-width: 576px){
+    .helper {
+        //display: inline-block;
+        //height: 100%;
+        //vertical-align: middle;
+    }
+    @media (max-width: 992px){
+        padding: 32px 15px 48px !important;
+        
+        .header-image-wrapper {
+            white-space: nowrap;
+            text-align: center; 
+            margin: 2em 0;
+        }
+        img {
+            vertical-align: middle;
+            max-height: 190px;
+            max-width: 350px;
+        }
+        .helper {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }    
+    }
+    @media (max-width: 768px) {
+        .header-image-wrapper {
+            display: none;
+            .helper {
+                display: none;
+                height: 0;
+            }
+            img {
+                display: none;
+            }
+        }
+        .page-header-intro {
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+    /*@media (max-width: 576px){
         padding: 64px 15px 48px 15px !important;
         
         h1 {
             font-size: 32px;
             line-height: 37px;
         }
-    }
-    @media (min-width: 768px) {
+    }*/
+    /*@media (min-width: 768px) {
         
-        min-height: 384px;
+        min-height: 250px;
         
         .header-image-wrapper {
             width: inherit;
@@ -36,7 +79,8 @@
                 padding-right: 30px;        
             }
         }
-    }
+    }*/
+    
 }
 .top-of-page {
     padding-top: 0;

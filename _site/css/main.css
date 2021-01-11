@@ -3345,20 +3345,21 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 
 #exporttool #importing-requirements-section, #exporttool #tariff-section { display: none; }
 
-.page-header-theme-guide { background: #FFE492; padding: 64px 15px !important; }
+.page-header-theme-guide { background: #FFE492; padding: 48px 15px !important; /*@media (max-width: 576px){ padding: 64px 15px 48px 15px !important; h1 { font-size: 32px; line-height: 37px; } }*/ /*@media (min-width: 768px) { min-height: 250px; .header-image-wrapper { width: inherit; margin-top: 16px; svg, img { position: absolute; padding-right: 30px;         } } }*/ }
 
 .page-header-theme-guide .page-header-intro { font-size: 18px; line-height: 30px; }
 
-.page-header-theme-guide svg { width: 100%; margin-bottom: 32px; }
+.page-header-theme-guide img { width: 100%; margin: 0 auto 0; display: block; max-height: 190px; max-width: 350px; }
 
-.page-header-theme-guide img { width: 100%; max-width: 425px; margin: 0 auto 32px; display: block; }
+@media (max-width: 992px) { .page-header-theme-guide { padding: 32px 15px 48px !important; }
+  .page-header-theme-guide .header-image-wrapper { white-space: nowrap; text-align: center; margin: 2em 0; }
+  .page-header-theme-guide img { vertical-align: middle; max-height: 190px; max-width: 350px; }
+  .page-header-theme-guide .helper { display: inline-block; height: 100%; vertical-align: middle; } }
 
-@media (max-width: 576px) { .page-header-theme-guide { padding: 64px 15px 48px 15px !important; }
-  .page-header-theme-guide h1 { font-size: 32px; line-height: 37px; } }
-
-@media (min-width: 768px) { .page-header-theme-guide { min-height: 384px; }
-  .page-header-theme-guide .header-image-wrapper { width: inherit; margin-top: 16px; }
-  .page-header-theme-guide .header-image-wrapper svg, .page-header-theme-guide .header-image-wrapper img { position: absolute; padding-right: 30px; } }
+@media (max-width: 768px) { .page-header-theme-guide .header-image-wrapper { display: none; }
+  .page-header-theme-guide .header-image-wrapper .helper { display: none; height: 0; }
+  .page-header-theme-guide .header-image-wrapper img { display: none; }
+  .page-header-theme-guide .page-header-intro { font-size: 16px; line-height: 28px; } }
 
 .top-of-page { padding-top: 0; }
 
