@@ -11,7 +11,7 @@ function changePageExternal(url) {
 $(document).ready(function () {
     
     // Main navigation functionality
-    $('.navbar-nav .nav-item.dropdown').on('click', function(){
+    /*$('.navbar-nav .nav-item.dropdown').on('click', function(){
         $(this).find('.navigation-first-level-menu').toggleClass('show');
     });
 
@@ -55,7 +55,7 @@ $(document).ready(function () {
         e.preventDefault();
         window.location.pathname = "/bga-base-prototype/News.html";
     }); 
-
+    */
     
     
     // Prevent click empty 'a' tag from causing scrolling
@@ -259,16 +259,18 @@ $(document).ready(function () {
     //GUIDE TILES
     /*------------------- Open & close items -------------------*/
     $(".guide-title").on("click", function () {
-        $(this).next('.guide-content').slideToggle(200);
+        if(!($(this).hasClass('inactive'))) {
+            $(this).next('.guide-content').slideToggle(200);
 
-        $(this).toggleClass("open");
-        $(this).parent(".guide-section").toggleClass('open');
-        
-        var sectionId = $(this).parent(".guide-section").attr("id");
-        if ($(this).parent(".guide-section").hasClass('open')) {
-            sessionStorage.setItem(sectionId, 'open');
-        } else {
-            sessionStorage.setItem(sectionId, '');
+            $(this).toggleClass("open");
+            $(this).parent(".guide-section").toggleClass('open');
+
+            var sectionId = $(this).parent(".guide-section").attr("id");
+            if ($(this).parent(".guide-section").hasClass('open')) {
+                sessionStorage.setItem(sectionId, 'open');
+            } else {
+                sessionStorage.setItem(sectionId, '');
+            }
         }
             
      });
