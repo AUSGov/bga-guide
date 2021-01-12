@@ -670,3 +670,47 @@
         }
     }
 }
+.guide-main-section.task-4 {
+    #guide-tiles {
+        .guide-section {
+            .guide-title {
+                cursor: default;
+                
+                &:hover {
+                h3 {
+                    text-decoration: none;
+                }
+            }
+            }
+            .guide-content {
+                display: block;
+                
+                .required {
+                    position: relative;
+                    &:before {
+                        content: "";
+                        border: red 4px solid;
+                        position: absolute;
+                        height: 45px;
+                        width: 92px;
+                        top: -12px;
+                        left: -10px;
+                    }
+                }
+                .optional {
+                    position: relative;
+                    &:before {
+                        content: "";
+                        border: red 4px solid;
+                        position: absolute;
+                        height: 45px;
+                        width: 124px;
+                        top: -12px;
+                        left: -10px;
+                    }
+                }
+            }
+        }
+        
+    }
+}

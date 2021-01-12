@@ -3581,4 +3581,18 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 
 .guide-main-section.task-3 #guide-tiles .guide-section .guide-content { display: block; }
 
+.guide-main-section.task-4 #guide-tiles .guide-section .guide-title { cursor: default; }
+
+.guide-main-section.task-4 #guide-tiles .guide-section .guide-title:hover h3 { text-decoration: none; }
+
+.guide-main-section.task-4 #guide-tiles .guide-section .guide-content { display: block; }
+
+.guide-main-section.task-4 #guide-tiles .guide-section .guide-content .required { position: relative; }
+
+.guide-main-section.task-4 #guide-tiles .guide-section .guide-content .required:before { content: ""; border: red 4px solid; position: absolute; height: 45px; width: 92px; top: -12px; left: -10px; }
+
+.guide-main-section.task-4 #guide-tiles .guide-section .guide-content .optional { position: relative; }
+
+.guide-main-section.task-4 #guide-tiles .guide-section .guide-content .optional:before { content: ""; border: red 4px solid; position: absolute; height: 45px; width: 124px; top: -12px; left: -10px; }
+
 /*# sourceMappingURL=main.css.map */
