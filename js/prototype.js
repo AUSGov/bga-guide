@@ -8,54 +8,49 @@ function changePageExternal(url) {
     window.location = url;
 }
 
+// Add url fragment to pages for user testing.
+var task1 = sessionStorage.getItem('Task 1');
+console.log('Task 1 is ' + task1);
+if (task1 == 'true') {
+    window.location.hash = 'accordion-click'; 
+}
+
+var task2 = sessionStorage.getItem('Task 1');
+console.log('Task 2 is ' + task2);
+if (task2 == 'true') {
+    window.location.hash = 'accordion-click'; 
+}
+
+
 $(document).ready(function () {
     
-    // Main navigation functionality
-    /*$('.navbar-nav .nav-item.dropdown').on('click', function(){
-        $(this).find('.navigation-first-level-menu').toggleClass('show');
-    });
-
-    $('body').click(function(e){
+     // UNMOD TESTING FUNCTIONALITY
+    
+    // Task 1 - measure opening of accordions
+    $(".task1 .guide-title").on('click', function(){
+        var fragment = window.location.hash,
+            already_clicked = fragment.indexOf("accordion-click");
         
-        //console.log(e.target);
-        var top_menu_link = $('.navigation-main-menu > .nav-item').has(e.target).length > 0,
-            dropdown_menu = $('dropdown-menu').has(e.target).length > 0;
-        
-        if(!top_menu_link) {
-            //console.log("I'm not the menu link");
-            
-            $('.dropdown-menu').each(function(){
-                $(this).removeClass('show');
-            });
-        } else {
-            //console.log("I'm a top link");
+        if( already_clicked === -1) {
+            fragment = fragment + "accordion-click";
+            window.location.hash = fragment;
         }
+        sessionStorage.setItem('Task 1', true);
     });
     
-    // Main nav - top level links
-    $('#navbarDropdownMenuLink_0').on('click', function(e){
-        e.preventDefault();
+    // Task 2 - measure opening of accordions
+    $(".task2 .guide-title").on('click', function(){
+        var fragment = window.location.hash,
+            already_clicked = fragment.indexOf("accordion-click");
+        
+        if( already_clicked === -1) {
+            fragment = fragment + "accordion-click";
+            window.location.hash = fragment;
+        }
+        sessionStorage.setItem('Task 2', true);
     });
-    $('#navbarDropdownMenuLink_1').on('click', function(e){
-        e.preventDefault();
-    });
-    $('#navbarDropdownMenuLink_2').on('click', function(e){
-        e.preventDefault();
-        window.location.pathname = "/bga-base-prototype/Grants-and-programs.html";
-    });
-    $('#navbarDropdownMenuLink_3').on('click', function(e){
-        e.preventDefault();
-        window.location.pathname = "/bga-base-prototype/Expertise-and-advice.html";
-    });
-    $('#navbarDropdownMenuLink_4').on('click', function(e){
-        e.preventDefault();
-        window.location.pathname = "/bga-base-prototype/Events-and-training.html";
-    });
-    $('#navbarDropdownMenuLink_5').on('click', function(e){
-        e.preventDefault();
-        window.location.pathname = "/bga-base-prototype/News.html";
-    }); 
-    */
+    
+    
     
     
     // Prevent click empty 'a' tag from causing scrolling
@@ -217,28 +212,6 @@ $(document).ready(function () {
     
     
     
-    // EXPORT TOOL TABS & NAV TILES FUNCTIONALITY
-    $('.nav-link').on('click', function(e){
-        e.preventDefault();
-        $('.tab-section').hide(); 
-        
-        var active_section = '#' + $(this).attr('href');
-        $(active_section).show();
-    });
-    
-    $('.export-nav-tile').on('click', function(){
-        $('.tab-section').hide(); 
-        var active_section = $(this).attr('data-attribute');
-        $('#' + active_section).show();
-        
-        $('.nav-link.active').removeClass('active');
-        $('.nav-link[href='+ active_section + ']').addClass('active');
-        
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-        return false;
-    });
-    
-    
     // GUIDE MINI-LIST
     /*------------------- Open & close list items -------------------*/
     $(".guide-mini-list-item-title").on("click", function () {
@@ -295,7 +268,7 @@ $(document).ready(function () {
         }
         
     });
-    
+
 
     
 }); // END doc ready
