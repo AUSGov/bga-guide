@@ -8,23 +8,23 @@ function changePageExternal(url) {
     window.location = url;
 }
 
-// Add url fragment to pages for user testing.
-var task1 = sessionStorage.getItem('Task 1');
-console.log('Task 1 is ' + task1);
-if (task1 == 'true') {
-    window.location.hash = 'accordion-click'; 
-}
 
-var task2 = sessionStorage.getItem('Task 1');
-console.log('Task 2 is ' + task2);
-if (task2 == 'true') {
-    window.location.hash = 'accordion-click'; 
-}
 
 
 $(document).ready(function () {
     
-     // UNMOD TESTING FUNCTIONALITY
+    // UNMOD TESTING FUNCTIONALITY
+    // Add url fragment to pages for user testing.
+    var task = sessionStorage.getItem('task');
+    var task1 = sessionStorage.getItem('Task 1');
+    var task2 = sessionStorage.getItem('Task 2');
+    
+    if (task1 == 'true' && task === '1') {
+        window.location.hash = 'accordion-click'; 
+    } else if (task2 == 'true' && task === '2') {
+        window.location.hash = 'accordion-click'; 
+    }
+
     
     // Task 1 - measure opening of accordions
     $(".task1 .guide-title").on('click', function(){
@@ -50,9 +50,7 @@ $(document).ready(function () {
         sessionStorage.setItem('Task 2', true);
     });
     
-    
-    
-    
+
     // Prevent click empty 'a' tag from causing scrolling
     $('a').on('click', function(e){
         if (! $(this).attr('href') ) {
@@ -274,5 +272,15 @@ $(document).ready(function () {
 }); // END doc ready
 
 $(window).on( "unload", function(){
-
+    if ($('.guide-main-section').hasClass('task1')) {
+        sessionStorage.setItem('task', 1);
+        sessionStorage.setItem('Task 2', 'false');
+    } else if ($('.guide-main-section').hasClass('task2')) {
+        sessionStorage.setItem('task', 2);
+        sessionStorage.setItem('Task 1', 'false');
+    } else {
+        sessionStorage.setItem('task', 0);
+        sessionStorage.setItem('Task 1', 'false');
+        sessionStorage.setItem('Task 2', 'false');
+    }
 } );
