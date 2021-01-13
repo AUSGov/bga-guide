@@ -81,100 +81,113 @@ $(document).ready(function () {
         }
     }
     
-    // Remove whitespace from anchor-section names or they break the sidemenu links
-    /*$('.anchor-section').each(function(){
-        var section_name = $(this).attr('name');
-        section_name = $(this).attr('name').replace(/\s/g,' ');
-        $(this).attr('name', section_name);
-    });*/
     
-    // Function to make the side menu sticky
-    var stickyPosition = $('.anchor-menu').offset(); //This var is outside the function because it needs to be determined BEFORE window resizing,.
-    
-    function menuStickiness() {
-        
-        var win = $(window),
-            stickyWidth = $('.twoCol39-left').width();
-        
-        // Set side-menu initial horizontal position 
-        if(win.width() < 575) {
-            $('.anchor-menu').css('position', 'relative').css('top', 'auto');
-        } else if (win.width() >= 575) {
-            if (win.scrollTop() >= stickyPosition.top) {
-                $('.anchor-menu').css('position', 'fixed').css('top', '32px').css('width', stickyWidth);
-            } else {
-                $('.anchor-menu').css('position', 'relative').css('top', 'auto').css('width', stickyWidth);
+        // Add name attr to anchor-section. Name is taken from nested div inside the anchor-section.
+        $('.anchor-section > div').each(function(){ 
+            if ($('.anchor-menu').length !== 0) {
+                var section_name = $(this).attr('id').toLowerCase().trim();
+                $(this).parent('.anchor-section').attr('name', section_name);
             }
-        } 
-        
-        // Reset side-menu position on scroll
-        $(window).scroll(function () {
+        });
 
-            stickyWidth = $('.twoCol39-left').width();
 
-            if (win.width() < 575) {
-                $('.anchor-menu').css('position', 'relative').css('top', 'auto').css('width', stickyWidth);
+        // Function to make the side menu sticky
+        var stickyPosition = $('.anchor-menu').offset(); //This var is outside the function because it needs to be determined BEFORE window resizing,.
+
+        function menuStickiness() {
+
+            var win = $(window),
+                stickyWidth = $('.twoCol39-left').width();
+
+            // Set side-menu initial horizontal position 
+            if(win.width() < 575) {
+                $('.anchor-menu').css('position', 'relative').css('top', 'auto');
             } else if (win.width() >= 575) {
                 if (win.scrollTop() >= stickyPosition.top) {
                     $('.anchor-menu').css('position', 'fixed').css('top', '32px').css('width', stickyWidth);
-                } else if (win.scrollTop() < stickyPosition.top) {
+                } else {
                     $('.anchor-menu').css('position', 'relative').css('top', 'auto').css('width', stickyWidth);
                 }
-            }
-        });
-    }
+            } 
 
-    if ($( ".anchor-menu .sticky-container" ).length) {
+            // Reset side-menu position on scroll
+            $(window).scroll(function () {
 
-        // Apply menu stickiness
-        menuStickiness();
+                stickyWidth = $('.twoCol39-left').width();
 
-        
-        // Side menu scroll to section of the page
-        // and add top position of element to anchor link as a data-value
-        $('.anchor-menu a').each(function(){
-            
-            var a_text = $(this).text(),
-                element_name = $(this).text().replace(/\s/g,' ');
-                var name_str = '.anchor-section[name="' +  element_name  + '"]';
-                var element_position = $(name_str).offset();
-            
-            
-            if ($(name_str).length){
-                $(this).attr('data-value', Math.round(element_position.top));
-        
-                $(this).on('click', function(){
-                    $([document.documentElement, document.body]).animate(
-                        { scrollTop: $(name_str).offset().top }, 400);
-                    $('.anchor-menu a').removeClass('active-sticky');
-                    $(this).addClass('active-sticky');
-                });
-            }
-            
-            
-        });   
-        
-    
-        // Change menu active state on scroll to different sections of the page
-        var positions = [];
-        $('.anchor-menu a').each(function(){
-            var element_position = $(this).attr('data-value');
-            positions.push(Math.round(element_position));
-        }); 
-    
-        $(window).scroll(function(){
-            add_position(positions); 
-        });
-    
-    } // END if .anchor-menu .sticky-container EXISTS
-    
-    
-    // Menu stickiness on .resize()
-    $(window).on('resize', function(){
-        if ($( ".anchor-menu .sticky-container" ).length) {
-            menuStickiness();
+                if (win.width() < 575) {
+                    $('.anchor-menu').css('position', 'relative').css('top', 'auto').css('width', stickyWidth);
+                } else if (win.width() >= 575) {
+                    if (win.scrollTop() >= stickyPosition.top) {
+                        $('.anchor-menu').css('position', 'fixed').css('top', '32px').css('width', stickyWidth);
+                    } else if (win.scrollTop() < stickyPosition.top) {
+                        $('.anchor-menu').css('position', 'relative').css('top', 'auto').css('width', stickyWidth);
+                    }
+                }
+            });
         }
-    });
+
+        if ($( ".anchor-menu .sticky-container" ).length) {
+
+            // Apply menu stickiness
+            menuStickiness();
+
+
+            // Side menu scroll to section of the page
+            // Remove numbers and '.' from the start of numbered steps
+            // and add top position of element to anchor link as a data-value
+            $('.anchor-menu a').each(function(){
+
+                var a_text = $(this).text(),
+                    element_name = $(this).text().trim();
+                    element_name = element_name.replace(/\s+/g, '-').toLowerCase();
+                    element_name = element_name.replace(/[0-9]/g, '');
+                    element_name = element_name.split('.').join("");
+                    if (element_name.charAt(0) === '-') {
+                        element_name = element_name.substring(1);
+                    }              
+                //console.log(element_name);
+                    
+                var name_str = 'div[name="' +  element_name  + '"]';
+                var element_position = $(name_str).offset();
+                //console.log(element_position);
+
+
+                if ($(name_str).length){
+                    $(this).attr('data-value', Math.round(element_position.top));
+
+                    $(this).on('click', function(){
+                        $([document.documentElement, document.body]).animate(
+                            { scrollTop: $(name_str).offset().top }, 400);
+                        $('.anchor-menu a').removeClass('active-sticky');
+                        $(this).addClass('active-sticky');
+                    });
+                }
+
+
+            });   
+
+
+            // Change menu active state on scroll to different sections of the page
+            var positions = [];
+            $('.anchor-menu a').each(function(){
+                var element_position = $(this).attr('data-value');
+                positions.push(Math.round(element_position));
+            }); 
+
+            $(window).scroll(function(){
+                add_position(positions); 
+            });
+
+        } // END if .anchor-menu .sticky-container EXISTS
+
+
+        // Menu stickiness on .resize()
+        $(window).on('resize', function(){
+            if ($( ".anchor-menu .sticky-container" ).length) {
+                menuStickiness();
+            }
+        });
     
     
    

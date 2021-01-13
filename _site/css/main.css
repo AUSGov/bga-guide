@@ -3345,7 +3345,7 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 
 #exporttool #importing-requirements-section, #exporttool #tariff-section { display: none; }
 
-.page-header-theme-guide { background: #FFE492; padding: 48px 15px !important; /*@media (max-width: 576px){ padding: 64px 15px 48px 15px !important; h1 { font-size: 32px; line-height: 37px; } }*/ /*@media (min-width: 768px) { min-height: 250px; .header-image-wrapper { width: inherit; margin-top: 16px; svg, img { position: absolute; padding-right: 30px;         } } }*/ }
+.page-header-theme-guide { background: #FFE492; padding: 48px 15px !important; }
 
 .page-header-theme-guide .page-header-intro { font-size: 18px; line-height: 30px; }
 
@@ -3407,6 +3407,8 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 
 #guide-tiles .guide-expand-all { margin-bottom: 8px; position: relative; min-height: 36px; }
 
+#guide-tiles .guide-expand-all.open svg { transform: rotate(180deg); }
+
 #guide-tiles .guide-expand-all .guide-group-toggle-content { max-width: 96px; position: absolute; top: 0; right: 0; }
 
 #guide-tiles .guide-expand-all .guide-group-toggle-content h5 { display: inline-block; color: #666666; text-decoration: none; margin: 0; padding: 0; }
@@ -3415,7 +3417,7 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 
 #guide-tiles .guide-expand-all .guide-group-toggle-content:hover, #guide-tiles .guide-expand-all .guide-group-toggle-content:focus { border-bottom: solid #666666 2px; }
 
-#guide-tiles .guide-section { background: #E5EDF7; margin-bottom: 16px; padding: 0 0 0 16px; width: 100%; max-width: 1140px; cursor: pointer; display: block; }
+#guide-tiles .guide-section { background: #E5EDF7; margin-bottom: 16px; padding: 0 0 0 16px; width: 100%; max-width: 1140px; display: block; }
 
 #guide-tiles .guide-section.green { background-color: #E0F2F1; }
 
@@ -3513,7 +3515,7 @@ label { display: block; padding: 5px 0; font-weight: bold; }
 
 #guide-tiles .guide-section.blue .guide-subtile { border-top: solid #4569A0 4px; }
 
-#guide-tiles .guide-section .guide-title { display: inline-flex; padding: 0 64px 0 0; position: relative; }
+#guide-tiles .guide-section .guide-title { display: inline-flex; padding: 0 64px 0 0; position: relative; cursor: pointer; }
 
 #guide-tiles .guide-section .guide-title .chevron-wrapper { width: 92px; height: 100%; position: absolute; background: url("../assets/chevron-down-black-lrg.svg") no-repeat; background-position: center center; right: 0; top: 0; }
 
