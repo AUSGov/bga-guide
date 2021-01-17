@@ -15,16 +15,44 @@ $(document).ready(function () {
     
     // UNMOD TESTING FUNCTIONALITY
     // Add url fragment to pages for user testing.
-    var task = sessionStorage.getItem('task');
-    var task1 = sessionStorage.getItem('Task 1');
-    var task2 = sessionStorage.getItem('Task 2');
+    var task = localStorage.getItem('task');
+    var task1 = localStorage.getItem('Task 1 Accordion');
+    var task2 = localStorage.getItem('Task 2 Accordion');
     
-    if (task1 == 'true' && task === '1') {
-        window.location.hash = 'accordion-click'; 
-    } else if (task2 == 'true' && task === '2') {
-        window.location.hash = 'accordion-click'; 
+    if ($('.guide-main-section').hasClass('task1')) {
+        localStorage.setItem('task', 1);
+        localStorage.setItem('Task 2 Accordion', 'false');
+        
+        if (task1 == 'true') {
+            window.location.hash = 'accordion-click'; 
+        }
+    } else if ($('.guide-main-section').hasClass('task2')) {
+        localStorage.setItem('task', 2);
+        localStorage.setItem('Task 1 Accordion', 'false');
+        
+        if (task2 == 'true') {
+            window.location.hash = 'accordion-click'; 
+        }
+    } else if ($('.guide-main-section').hasClass('task3')){
+        localStorage.setItem('task', 0);
+        localStorage.setItem('Task 1 Accordion', 'false');
+        localStorage.setItem('Task 2 Accordion', 'false');
+    } else if ($('.guide-main-section').hasClass('task4')){
+        localStorage.setItem('task', 0);
+        localStorage.setItem('Task 1 Accordion', 'false');
+        localStorage.setItem('Task 2 Accordion', 'false');
+    } else if ($('.guide-main-section').hasClass('task5')){
+        localStorage.setItem('task', 0);
+        localStorage.setItem('Task 1 Accordion', 'false');
+        localStorage.setItem('Task 2 Accordion', 'false');
+    } else if ($('.guide-main-section').length === 0) {
+        if (task1 == 'true' && task === '1') {
+            window.location.hash = 'accordion-click'; 
+        } else if (task2 == 'true' && task === '2') {
+            window.location.hash = 'accordion-click'; 
+        }
     }
-
+    
     
     // Task 1 - measure opening of accordions
     $(".task1 .guide-title").on('click', function(){
@@ -35,7 +63,8 @@ $(document).ready(function () {
             fragment = fragment + "accordion-click";
             window.location.hash = fragment;
         }
-        sessionStorage.setItem('Task 1', true);
+        localStorage.setItem('Task 1 Accordion', "true");
+        //localStorage.setItem('task', 1);
     });
     
     // Task 2 - measure opening of accordions
@@ -47,7 +76,8 @@ $(document).ready(function () {
             fragment = fragment + "accordion-click";
             window.location.hash = fragment;
         }
-        sessionStorage.setItem('Task 2', true);
+        localStorage.setItem('Task 2 Accordion', "true");
+        //localStorage.setItem('task', 2);
     });
     
 
@@ -249,12 +279,12 @@ $(document).ready(function () {
             $(this).toggleClass("open");
             $(this).parent(".guide-section").toggleClass('open');
 
-            var sectionId = $(this).parent(".guide-section").attr("id");
+            /*var sectionId = $(this).parent(".guide-section").attr("id");
             if ($(this).parent(".guide-section").hasClass('open')) {
-                sessionStorage.setItem(sectionId, 'open');
+                localStorage.setItem(sectionId, 'open');
             } else {
-                sessionStorage.setItem(sectionId, '');
-            }
+                localStorage.setItem(sectionId, '');
+            }*/
         }
             
      });
@@ -283,17 +313,3 @@ $(document).ready(function () {
 
     
 }); // END doc ready
-
-$(window).on( "unload", function(){
-    if ($('.guide-main-section').hasClass('task1')) {
-        sessionStorage.setItem('task', 1);
-        sessionStorage.setItem('Task 2', 'false');
-    } else if ($('.guide-main-section').hasClass('task2')) {
-        sessionStorage.setItem('task', 2);
-        sessionStorage.setItem('Task 1', 'false');
-    } else {
-        sessionStorage.setItem('task', 0);
-        sessionStorage.setItem('Task 1', 'false');
-        sessionStorage.setItem('Task 2', 'false');
-    }
-} );
