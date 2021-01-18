@@ -34,17 +34,17 @@ $(document).ready(function () {
             window.location.hash = 'accordion-click'; 
         }
     } else if ($('.guide-main-section').hasClass('task3')){
-        localStorage.setItem('task', 0);
-        localStorage.setItem('Task 1 Accordion', 'false');
-        localStorage.setItem('Task 2 Accordion', 'false');
+        localStorage.removeItem('task');
+        localStorage.removeItem('Task 1 Accordion');
+        localStorage.removeItem('Task 2 Accordion');
     } else if ($('.guide-main-section').hasClass('task4')){
-        localStorage.setItem('task', 0);
-        localStorage.setItem('Task 1 Accordion', 'false');
-        localStorage.setItem('Task 2 Accordion', 'false');
+        localStorage.removeItem('task');
+        localStorage.removeItem('Task 1 Accordion');
+        localStorage.removeItem('Task 2 Accordion');
     } else if ($('.guide-main-section').hasClass('task5')){
-        localStorage.setItem('task', 0);
-        localStorage.setItem('Task 1 Accordion', 'false');
-        localStorage.setItem('Task 2 Accordion', 'false');
+        localStorage.removeItem('task');
+        localStorage.removeItem('Task 1 Accordion');
+        localStorage.removeItem('Task 2 Accordion');
     } else if ($('.guide-main-section').length === 0) {
         if (task1 == 'true' && task === '1') {
             window.location.hash = 'accordion-click'; 
@@ -64,7 +64,6 @@ $(document).ready(function () {
             window.location.hash = fragment;
         }
         localStorage.setItem('Task 1 Accordion', "true");
-        //localStorage.setItem('task', 1);
     });
     
     // Task 2 - measure opening of accordions
@@ -77,7 +76,6 @@ $(document).ready(function () {
             window.location.hash = fragment;
         }
         localStorage.setItem('Task 2 Accordion', "true");
-        //localStorage.setItem('task', 2);
     });
     
 
@@ -92,8 +90,8 @@ $(document).ready(function () {
     $('a.breadcrumb-link').each(function(){
         if( $(this).is(':empty') ) {
             var wrapper = $(this).parent('.breadcrumb-home-wrapper');
-            $(wrapper).css('display', 'none');
-        }
+            $(wrapper).remove();
+        } 
     });
     
 

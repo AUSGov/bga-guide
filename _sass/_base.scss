@@ -13,6 +13,13 @@
 /* BREADCRUMBS */
 .breadcrumb-wrapper {
     display: flex;
+    
+    @media (max-width: 576px) {
+        .hidden.arrow {
+            display: none;
+        }
+        
+    }
 }
 
 
@@ -41,6 +48,12 @@
         right: 32px;
         top: 32px;
         cursor: pointer;
+    }
+    
+    @media (max-width: 576px) {
+        width: 90%;
+        top: 10%;
+        left: 5%;
     }
 }
 .modal-background {
